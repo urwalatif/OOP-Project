@@ -1,6 +1,5 @@
 #pragma once
 #pragma once
-#pragma once
 #ifndef Attendance_H
 #define Attendance_H
 
@@ -24,7 +23,7 @@ public:
 
 	Attendance();
 
-	friend istream& operator >> (istream& in, Attendance& obj);
+	//friend istream& operator >> (istream& in, Attendance& obj);
 
 	bool Login();
 	int Menu();

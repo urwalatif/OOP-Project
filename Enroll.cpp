@@ -31,13 +31,13 @@ bool Enroll::Login()
 	cout << "    PASSWORD (OOP123)    :"; cin >> pass;
 	cout << " --------------------------------------- " << endl;
 
-
+	
 	if (id == "Hina" && pass == "OOP123")
 	{
 		cout << endl << "Login Success!" << endl;
 		return 1;
 	}
-	else
+	else 
 	{
 		cout << endl << "No Teacher Exists! " << endl;
 		return 0;
@@ -87,12 +87,12 @@ void Enroll::viewAllStudents()
 	cout << "| ____________________________________________________________________________________________________ |" << endl;
 
 	bool a = 1;
-	while (a == 1)
+	while (a==1)
 	{
 		infile >> firstName >> lastName >> sID >> DepartmentName >> regDate >> gender >> contactNo >> Address >> feeStatus >> BloodGroup;
 		if (!infile.eof())
 		{
-			cout << "| " << setw(5) << sID << setw(12) << firstName << setw(10) << lastName << setw(6) << gender << setw(10) << DepartmentName << setw(24) << contactNo << setw(15) << Address << setw(10) << feeStatus << "  |" << endl;
+			cout << "| " << setw(5) << sID << setw(12) << firstName << setw(10) << lastName << setw(6) << gender << setw(10) << DepartmentName << setw(24) << contactNo << setw(15) << Address<<setw(10)<<feeStatus << "  |" << endl;
 		}
 		else
 		{
@@ -110,7 +110,7 @@ void Enroll::viewAllStudents()
 void Enroll::AddData()
 {
 	system("cls");
-
+	
 	cout << " ------------------------------------------------- " << endl;
 	cout << "               Enter New Student Data              " << endl;
 	cout << " ------------------------------------------------- " << endl;
@@ -130,8 +130,8 @@ void Enroll::AddData()
 	outfile.open("Enroll.txt", ios::app);
 
 	// Save new student data to the file
-	outfile << endl << firstName << "    " << lastName << "    " << sID << "    " << DepartmentName << "    " << regDate << "    "
-		<< gender << "    " << contactNo << "    " << Address << "    " << feeStatus << "    " << BloodGroup;
+	outfile <<endl<< firstName << "    " << lastName << "    " << sID << "    " << DepartmentName << "    " << regDate << "    "
+		<< gender << "    " << contactNo << "    " << Address << "    " << feeStatus << "    " << BloodGroup ;
 
 	outfile.close();
 

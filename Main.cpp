@@ -226,7 +226,7 @@ int main()
 			//choice switch.
 		default:
 			playSound();
-			//sfml_text(" -----------------------  \n Invalid Input \n -----------------------  ");
+			sfml_text(" -----------------------  \n Invalid Input \n -----------------------  ");
 			cout << "No such choice exit" << endl;
 			ctrl = 0;
 			break;

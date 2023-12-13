@@ -23,7 +23,7 @@ public:
 
 	Marks();
 
-	friend istream& operator >> (istream& in, Marks& obj);
+	//friend istream& operator >> (istream& in, Marks& obj);
 
 	bool Login();
 	int Menu();

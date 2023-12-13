@@ -25,7 +25,7 @@ public:
 
 	Registration();
 
-	friend istream& operator >> (istream& in, Registration& obj);
+	//friend istream& operator >> (istream& in, Registration& obj);
 
 	bool Login();
 	int Menu();

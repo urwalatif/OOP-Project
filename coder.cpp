@@ -8,7 +8,7 @@ using namespace std;
 coder::coder()
 {
 	marks = P = A = 0;
-	courseName1 = courseName2 = courseName3 = courseName4 = courseName = stuID = " ";
+	courseName1= courseName2= courseName3= courseName4 = courseName = stuID = " ";
 	grade = '-';
 }
 

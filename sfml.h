@@ -1,3 +1,4 @@
+#pragma once
 #ifndef SFML_H
 #define SFML_H
 
