@@ -110,7 +110,7 @@ void Registration::viewCourses()
 	// Read and print each line from the file
 	while (!infile.eof())
 	{
-		infile >> stuID >> courseName1 >> courseName2 >> courseName3 >> courseName4;
+		infile >> stuID >> courseName1 >> courseName2 >> courseName3>> courseName4;
 		if (stuID == loggedIn)
 		{
 			cout << "-------------------------" << endl;
@@ -153,79 +153,79 @@ void Registration::Availablecourse()
 }
 void Registration::Registercourse()
 {
-	system("cls");
+	  system("cls");
 
-	// Display available courses
+    // Display available courses
 	cout << "___________________________________________" << endl;
 	cout << endl;
-	cout << "\tCourses in Which you can Register" << endl;
+    cout << "\tCourses in Which you can Register" << endl;
 	cout << endl;
 	cout << "___________________________________________" << endl;
 
-	ifstream availableCoursesFile;
-	availableCoursesFile.open("AvailableCourses.txt", ios::in);
+    ifstream availableCoursesFile;
+    availableCoursesFile.open("AvailableCourses.txt", ios::in);
 
-	while (!availableCoursesFile.eof())
-	{
-		string course;
-		getline(availableCoursesFile, course);
-		cout << course << endl;
-	}
+    while (!availableCoursesFile.eof())
+    {
+        string course;
+        getline(availableCoursesFile, course);
+        cout << course << endl;
+    }
 
 	cout << endl;
 	cout << "___________________________________________" << endl;
-	availableCoursesFile.close();
+    availableCoursesFile.close();
 
 	cout << endl;
-	// Get the course name from the user
-	string selectedCourse;
-	cout << "Enter the course you want to register: ";
-	cin >> selectedCourse;
+    // Get the course name from the user
+    string selectedCourse;
+    cout << "Enter the course you want to register: ";
+    cin >> selectedCourse;
 
 	cout << endl;
 	cout << "___________________________________________" << endl;
 	cout << endl;
 	system("pause");
 
-	// Check if the selected course is available
-	ifstream availableCoursesCheckFile;
-	availableCoursesCheckFile.open("AvailableCourses.txt", ios::in);
+    // Check if the selected course is available
+    ifstream availableCoursesCheckFile;
+    availableCoursesCheckFile.open("AvailableCourses.txt", ios::in);
 
-	bool courseAvailable = false;
+    bool courseAvailable = false;
 
-	while (!availableCoursesCheckFile.eof())
-	{
-		string course;
-		getline(availableCoursesCheckFile, course);
-		if (course == selectedCourse)
-		{
-			courseAvailable = true;
-			break;
-		}
-	}
+    while (!availableCoursesCheckFile.eof())
+    {
+        string course;
+        getline(availableCoursesCheckFile, course);
+        if (course == selectedCourse)
+        {
+            courseAvailable = true;
+            break;
+        }
+    }
 
-	availableCoursesCheckFile.close();
+    availableCoursesCheckFile.close();
 
-	// Register the course if available
-	if (courseAvailable)
-	{
-		ofstream registrationFile;
-		registrationFile.open("Registration.txt", ios::app); // Open file in append mode
+    // Register the course if available
+    if (courseAvailable)
+    {
+        ofstream registrationFile;
+        registrationFile.open("Registration.txt", ios::app); // Open file in append mode
 
-		// Assuming you already have the student ID stored in loggedIn
-		registrationFile << loggedIn << " " << selectedCourse << endl;
+        // Assuming you already have the student ID stored in loggedIn
+        registrationFile << loggedIn << " " << selectedCourse << endl;
 
-		registrationFile.close();
+        registrationFile.close();
 
-		cout << "Course registration successful!" << endl;
-	}
-	else
-	{
+        cout << "Course registration successful!" << endl;
+    }
+    else
+    {
 		playSound();
-		cout << "Selected course is not available. Registration failed." << endl;
-	}
+        cout << "Selected course is not available. Registration failed." << endl;
+    }
 
-	system("pause");
+    system("pause");
 }
 
 Registration::~Registration()

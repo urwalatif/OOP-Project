@@ -23,7 +23,7 @@ public:
 
 	Enroll();
 
-	friend istream& operator >> (istream& in, Enroll& obj);
+	//friend istream& operator >> (istream& in, Enroll& obj);
 
 	bool Login();
 	int Menu();

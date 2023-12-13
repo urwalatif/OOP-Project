@@ -128,7 +128,7 @@ void Marks::AssignMarks() {
 	marksFile.open("Marks.txt", ios::app);
 
 	// Write the marks record to the file
-	marksFile << endl << studentID << "\t" << selectedSubject << "\t" << marks;
+	marksFile <<endl<< studentID << "\t" << selectedSubject << "\t" << marks ;
 
 	cout << "Marks assigned successfully for subject " << selectedSubject << "!" << endl;
 
@@ -159,7 +159,7 @@ void Marks::viewMarks()
 		marksFile >> tempStudentID >> subject >> marks;
 
 		if (tempStudentID == studentID) {
-			cout << tempStudentID << "\t" << subject << "\t\t" << marks << endl;
+			cout << tempStudentID << "\t" << subject  << "\t\t" << marks << endl;
 		}
 	}
 

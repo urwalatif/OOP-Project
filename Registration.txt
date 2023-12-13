@@ -1,0 +1,5 @@
+CS-0    ICT    Physics   OOP    DLD 
+CS-1    DSA    DS    ICT	PF	
+CS-2	LA	COAL	DLD		OOP	
+CS-3	Physics   DSA		Calculas    OOP	
+CS-4	LA		ICT		DS   PF	

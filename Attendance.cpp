@@ -60,8 +60,6 @@ bool Attendance::Login()
 
 	infile.close();
 
-	system("pause");
-
 	return 0;
 }
 
@@ -87,7 +85,6 @@ int Attendance::Menu()
 		cout << "Invalid Choice!  Please Enter Again: ";
 		cin >> choice;
 	}
-	system("pause");
 	return choice;
 }
 
@@ -170,7 +167,7 @@ void Attendance::markAttendance()
 	attendanceFile.open("Attendance.txt", ios::app);
 
 	// Write the attendance record to the file
-	attendanceFile << endl << studentID << "\t" << selectedSubject << "\t\t" << currentDate << "\t\t" << attendanceStatus << endl;
+	attendanceFile << endl<<studentID << "\t" << selectedSubject << "\t\t" << currentDate << "\t\t" << attendanceStatus << endl;
 
 	cout << "Attendance marked successfully for " << selectedSubject << "!" << endl;
 

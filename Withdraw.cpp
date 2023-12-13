@@ -147,16 +147,16 @@ void Withdraw::dropcourse()
 			studentFound = true;
 			// Check if the course to drop matches any of the registered courses
 			if (course1 == courseToDrop) {
-				tempFile << tempStudentID << " " << course2 << " " << course3 << " " << course4 << endl;
+				tempFile << tempStudentID  << " " << course2 << " " << course3 << " " << course4 << endl;
 			}
 			else if (course2 == courseToDrop) {
 				tempFile << tempStudentID << " " << course1 << course3 << " " << course4 << endl;
 			}
 			else if (course3 == courseToDrop) {
-				tempFile << tempStudentID << " " << course1 << " " << course2 << course4 << endl;
+				tempFile << tempStudentID << " " << course1 << " " << course2 <<  course4 << endl;
 			}
 			else if (course4 == courseToDrop) {
-				tempFile << tempStudentID << " " << course1 << " " << course2 << " " << course3 << endl;
+				tempFile << tempStudentID << " " << course1 << " " << course2 << " " << course3 <<  endl;
 			}
 			else {
 				// If the course does not match, keep the original line
